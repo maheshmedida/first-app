@@ -1,0 +1,35 @@
+<html>
+  <body>
+    <app-header [currRoute]="currRoute"></app-header>
+    <div class="vh-100" style="background-color: #508bfc;">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+            <div class="card shadow-2-strong" style="border-radius: 1rem;">
+              <div class="card-body p-4 text-center">
+    
+                <h3 class="mb-5">Please Login</h3>
+                <!-- <h2>{{errorMsg}}</h2>
+                <h2>{{successMsg}}</h2> -->
+    
+                <div class="mb-4 d-flex flex-column">
+                  <label class="form-label" for="email" style="text-align: left;">Email</label>
+                  <input type="email" id="email" class="form-control form-control-lg" [(ngModel)]="loginDetails.email" (blur)="emailValidator()"/>
+                  <p *ngIf = "emailEmptyError==true" style="color: red; font-size: 10px; text-align: left;">*Please fill email</p>
+                </div>
+    
+                <div class="mb-4 d-flex flex-column">
+                  <label class="form-label" for="password" style="text-align: left;">Password</label>
+                  <input type="password" id="password" class="form-control form-control-lg" [(ngModel)]="loginDetails.password" (blur)="passwordValidator()"/>
+                  <p *ngIf = "passwordEmptyError==true" style="color: red; font-size: 10px; text-align: left;">*Please fill password</p>
+
+                </div>
+                <button class="btn btn-primary btn-lg btn-block" type="button" (click)="userLogin()">Login</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      </body>
+</html>

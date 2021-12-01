@@ -1,0 +1,84 @@
+<nav class="navbar navbar-expand-sm bg-light vw-100">
+
+    <div class="container-fluid d-flex">
+        <!-- <h1 *ngIf = "isLoggedIn" style="color: crimson;">
+            Is Logged In ahsbsjnshnsjncjsmncjs
+        </h1> -->
+        <!-- <h1 *ngIf="isLoggedIn; then success else failure"></h1>
+        <ng-template #success>
+            IS LOGGED IN
+        </ng-template>
+        <ng-template #failure>
+            IS NOT LOGGED IN
+        </ng-template>  -->
+        <img src="https://mdbootstrap.com/img/Photos/new-templates/animal-shelter/logo.png" height="70" alt="Dog"
+      loading="lazy" /> 
+      
+<ng-template [ngIf] = "currRoute=='login'">
+    <!-- <div class="ml-auto">
+        <a class="nav-link" routerLink = "/register">Sign Up</a>
+      </div> -->
+</ng-template>
+<ng-template [ngIf] = "currRoute=='register'">
+    <div class="ml-auto">
+        <a class="nav-link" routerLink = "/login">Login</a>
+      </div>
+</ng-template>
+      <ng-template [ngIf] = "currRoute=='home'">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink = "/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink = "/products">Products</a> 
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink = "/about">About us</a>
+        </li>
+      </ul>
+      <div class="ml-auto">
+      <a class="nav-link" routerLink = "/login">Logout</a>
+    </div>
+    </ng-template>
+    <ng-template [ngIf] = "currRoute=='products'">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink = "/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink = "/products">Products</a> 
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink = "/about">About us</a>
+        </li>
+      </ul>
+      <div class="ml-auto">
+      <a class="nav-link" routerLink = "/login">Logout</a>
+    </div>
+    </ng-template>
+    <ng-template [ngIf] = "currRoute=='about'">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink = "/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink = "/products">Products</a> 
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink = "/about">About us</a>
+        </li>
+      </ul>
+      <div class="ml-auto">
+      <a class="nav-link" routerLink = "/login">Logout</a>
+    </div>
+    </ng-template>
+    <ng-template [ngIf] = "currRoute=='notfound'">
+        <div class="ml-auto d-flex">
+            <a class="nav-link" routerLink = "/login">Login</a>
+            <a class="nav-link" routerLink = "/register">Sign Up</a>
+          </div>
+    </ng-template>
+    </div>
+  
+  </nav>
+  <!-- href="#" -->
