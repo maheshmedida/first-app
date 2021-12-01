@@ -2,22 +2,20 @@
 <!-- <div class="vh-100 vw-100 d-flex flex-column justify-content-center align-items-center" style="background: cornsilk;">
 <h1>Explore our products here!</h1>
 </div> -->
-<ng-template [ngIf]= "apiStatus === apiStatusConst.success">
-        <div 
-        class="search-results"
-        infiniteScroll
-        [infiniteScrollDistance]="2"
-        [infiniteScrollThrottle]="20"
-        (scrolled)="onScroll()"
-        >>
-        <ul class="vw-100 d-flex fex-column align-items-center justify-content-start" *ngFor = "let item of productsData">
-            <li class="vw-50 d-flex flex-column justify-content-start align-items-center">
-                <h2>{{item.id}}</h2>
-                <p>Item</p>
+<ng-template [ngIf]= "apiStatus === apiStatusConst.success"> 
+        <ul class=" mt-4 vw-100 d-flex flex-column align-items-center justify-content-start search-results" *ngFor = "let item of productsData">
+            <li class="w-50 border border-dark rounded p-3 d-flex flex-column justify-content-start align-items-center">
+                <h4> Id: {{item.id}}</h4>
+                <p class="text-primary">Name: {{item.name}}</p>
             </li>
         </ul>
-    </div>
+        <p class="text-success text-center mt-4" [ngIf] = "loadingText === true">
+            Loading...
+        </p>
+        <div infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="20" (scrolled)="onScroll()"></div>
 </ng-template>
 <ng-template [ngIf]= "apiStatus === apiStatusConst.failure">
+    <div class="vw-100 vh-100 d-flex justify-content-center align-items-center">
     <h1>Oops! Something went wrong. Please try again!</h1>
+    </div>
 </ng-template>

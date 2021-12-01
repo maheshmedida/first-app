@@ -27,4 +27,9 @@ iamHeaderOption:any
      const url = 'http://ingress-gateway.gaiansolutions.com/engagements-web/v1.0/6052f5347b20fd0006394a2d/engagements/list?paged=true&page=0&size=40&ownedOnly=true'
      return this.http.get(url)
    }
+
+   getAllProducts2(formData:any){
+    const url = 'http://ingress-gateway.gaiansolutions.com/engagements-web/v1.0/6052f5347b20fd0006394a2d/engagements/list?paged=true&page=0&size=40&ownedOnly=true'
+return this.http.post(url,formData)
+   }
 }
